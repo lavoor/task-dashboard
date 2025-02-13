@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Made in vue 3, tailwindcss and vite.</p>
+<p align="left">Made in vue 3, typescript, tailwindcss and vite.</p>
 <p align="left">All tasks and settings like darkmode or layout are saved in localstorage.</p>
 
 ###
