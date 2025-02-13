@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@tailwind utilities;
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+
+    @variant lg {
+        padding-inline: 0;
+        max-width: 56rem;
+    }
+    @variant xl {
+        max-width: 56rem;
+    }
+}
+
+@theme{
+    --font-inter: "Inter", serif;
+    --color-stone-150: oklch(95.86% 0.0017 67.8);
+    --color-stone-750: oklch(30.07% 0.0068 48.48);
+    --animate-rotate-hover: rotateHover 1s ease-in-out;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: 0.1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
+
+.taskList-move,
+.taskList-enter-active,
+.taskList-leave-active {
+    transition: all 0.3s ease;
+}
+
+.taskList-enter-from,
+.taskList-leave-to {
+    opacity: 0;
+    transform: translateY(-2rem);
+}
+.taskList-leave-active {
+    position: absolute;
+}
+
+.taskCard-move,
+.taskCard-enter-active,
+.taskCard-leave-active {
+    transition: all 0.3s ease;
+}
+
+.taskCard-enter-from,
+.taskCard-leave-to {
+    opacity: 0;
+}
+.taskCard-leave-active {
+    position: absolute;
+}
+
+@keyframes rotateHover {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(40deg);
+    }
+    50%{
+        transform: rotate(-35deg);
+    }
+    75%{
+        transform: rotate(25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
