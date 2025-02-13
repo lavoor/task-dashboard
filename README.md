@@ -1,5 +1,16 @@
-# Vue 3 + TypeScript + Vite
+<h3 align="left">Task dashboard</h3>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+###
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+<p align="left">Made in vue 3, tailwindcss and vite.</p>
+<p align="left">All tasks and settings like darkmode or layout are saved in localstorage.</p>
+
+###
+
+<h3>live demo</h3>
+<a href="https://task-dashboard-sepia.vercel.app/">task-dashboard-sepia.vercel.app</a>
+
+###
+
+<h3>figma project</h3>
+<a href="https://www.figma.com/community/file/1471707787641152605">https://www.figma.com/community/file/1471707787641152605</a>
