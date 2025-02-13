@@ -10,6 +10,8 @@ const isTask = (item: any): item is Task => {
         !isNaN(Date.parse(item.createdAt))
     );
 };
-export const isTaskArray = (data: any): data is Task[] => {
+const isTaskArray = (data: any): data is Task[] => {
     return Array.isArray(data) && data.every(isTask);
 };
+
+export {isTaskArray};

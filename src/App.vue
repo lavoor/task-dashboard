@@ -59,12 +59,12 @@ import TaskListItem from "./components/TaskListItem.vue";
 import TaskCardItem from "./components/TaskCardItem.vue";
 import OptionList from "./components/OptionList.vue";
 import OptionCards from "./components/OptionCards.vue";
-import { Task } from "./types/task";
+import type { Task, TaskStatus } from "./types/task";
 import AddTask from "./components/AddTask.vue";
 import EditTask from "./components/EditTask.vue";
 import { isTaskArray } from "./utils/checkTaskArray";
 
-const tasks = ref([]);
+const tasks = ref<Task[]>([]);
 
 const darkMode = ref(false);
 const toggleDarkMode = () => {
@@ -78,7 +78,7 @@ const getUserDarkMode = () => {
     }
 }
 
-const handleBeforeLeave = (element: HTMLElement) => {
+const handleBeforeLeave = (element: Element) => {
     const el = element as HTMLElement;
     const { marginLeft, marginTop, width, height } = window.getComputedStyle(el);
 
@@ -134,7 +134,7 @@ const getUserTaskStyle = () => {
     }
 }
 
-const filters = ref([]);
+const filters = ref<string[]>([]);
 const sorting = ref('newest');
 const searchValue = ref('');
 const debounceTime = 500;
@@ -308,7 +308,7 @@ const taskDone = (uuid: string) => {
         if(task.id === uuid) {
             return {
                 ...task,
-                status: "done"
+                status: "done" as TaskStatus
             }
         }
         return task;

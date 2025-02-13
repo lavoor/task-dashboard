@@ -75,7 +75,7 @@
 </template>
 
 <script setup lang="ts">
-    import { Task, TaskStatus } from '@/types/task';
+    import type { Task, TaskStatus } from '@/types/task';
     import { ref } from 'vue';
     import {v4 as uuidv4} from 'uuid';
 
